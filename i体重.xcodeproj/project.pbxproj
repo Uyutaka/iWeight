@@ -15,6 +15,10 @@
 		769D84241AA83CD000426C4C /* i__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84231AA83CD000426C4C /* i__Tests.swift */; };
 		769D84301AA83F5200426C4C /* CalcBmiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D842F1AA83F5200426C4C /* CalcBmiViewController.swift */; };
 		769D84321AA83F9600426C4C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84311AA83F9600426C4C /* SettingViewController.swift */; };
+		769D84341AA84D3400426C4C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769D84331AA84D3400426C4C /* Realm.framework */; };
+		769D84361AA84D8500426C4C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 769D84351AA84D8500426C4C /* libc++.dylib */; };
+		769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84371AA84DCA00426C4C /* RLMSupport.swift */; };
+		769D843A1AA8504C00426C4C /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84391AA8504C00426C4C /* Staff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		769D84231AA83CD000426C4C /* i__Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i__Tests.swift; sourceTree = "<group>"; };
 		769D842F1AA83F5200426C4C /* CalcBmiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalcBmiViewController.swift; path = ../CalcBmiViewController.swift; sourceTree = "<group>"; };
 		769D84311AA83F9600426C4C /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		769D84331AA84D3400426C4C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		769D84351AA84D8500426C4C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		769D84371AA84DCA00426C4C /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
+		769D84391AA8504C00426C4C /* Staff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769D84361AA84D8500426C4C /* libc++.dylib in Frameworks */,
+				769D84341AA84D3400426C4C /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +73,9 @@
 		769D83FF1AA83CD000426C4C = {
 			isa = PBXGroup;
 			children = (
+				769D84371AA84DCA00426C4C /* RLMSupport.swift */,
+				769D84351AA84D8500426C4C /* libc++.dylib */,
+				769D84331AA84D3400426C4C /* Realm.framework */,
 				769D840A1AA83CD000426C4C /* i体重 */,
 				769D84201AA83CD000426C4C /* i体重Tests */,
 				769D84091AA83CD000426C4C /* Products */,
@@ -83,6 +96,7 @@
 			children = (
 				769D840D1AA83CD000426C4C /* AppDelegate.swift */,
 				769D840F1AA83CD000426C4C /* ViewController.swift */,
+				769D84391AA8504C00426C4C /* Staff.swift */,
 				769D842F1AA83F5200426C4C /* CalcBmiViewController.swift */,
 				769D84111AA83CD000426C4C /* Main.storyboard */,
 				769D84311AA83F9600426C4C /* SettingViewController.swift */,
@@ -218,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				769D843A1AA8504C00426C4C /* Staff.swift in Sources */,
 				769D84101AA83CD000426C4C /* ViewController.swift in Sources */,
 				769D840E1AA83CD000426C4C /* AppDelegate.swift in Sources */,
+				769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */,
 				769D84301AA83F5200426C4C /* CalcBmiViewController.swift in Sources */,
 				769D84321AA83F9600426C4C /* SettingViewController.swift in Sources */,
 			);
@@ -344,6 +360,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "i体重/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +374,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "i体重/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
