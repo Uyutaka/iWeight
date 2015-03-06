@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Realm
 
 class CalcBmiViewController: UIViewController {
 
@@ -27,6 +28,43 @@ class CalcBmiViewController: UIViewController {
         
         self.bmiLabel.text = bmi.description
         self.stateLabel.text = state
+        
+        
+    
+        // DB処理
+            // pathを確認
+            println(RLMRealm.defaultRealmPath())
+            println("_____")
+            
+            
+            // defaultのパスを設定（モデルを変更した時Db名を変えた必要あり）
+            let path:String = pathDb("weight.realm")
+            RLMRealm.setDefaultRealmPath(path)
+            println(RLMRealm.defaultRealmPath())
+            
+            
+            let realm = RLMRealm.defaultRealm()
+            
+            
+            // INSERTするweightインスタンスを作成
+            let weight = Weight()
+            weight.weight = 234.3
+            weight.date = getLocalTime()
+            
+            
+            // weightオブジェクトをINSERT
+            realm.beginWriteTransaction()
+            realm.addObject(weight)
+            realm.commitWriteTransaction()
+            
+            // 検索
+            for realmWeight in Weight.allObjects(){
+                println("+++++++++++++++")
+                println((realmWeight as Weight).weight)
+                println((realmWeight as Weight).date)
+            }
+
+      
         
     }
 
@@ -62,6 +100,34 @@ class CalcBmiViewController: UIViewController {
         }else{
             return "デブ"
         }
+    }
+    
+    
+    
+    func getLocalTime() -> String{
+        
+        // localTime表示   http://www.davidbreyer.com/programming/2014/06/10/getting-local-date-and-time-with-swift/
+        
+        let date = NSDate();
+        let dateFormatter = NSDateFormatter()
+        //To prevent displaying either date or time, set the desired style to NoStyle.
+        dateFormatter.timeStyle = NSDateFormatterStyle.MediumStyle //Set time style
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle //Set date style
+        dateFormatter.timeZone = NSTimeZone()
+        let localDate = dateFormatter.stringFromDate(date)
+        
+        //println(date)       ->  UTC Time   :: 2015-03-06 06:45:46 +0000
+        //println(localDate)  ->  Local Time :: Mar 6, 2015, 3:42:48 PM
+        
+        
+        return localDate
+        
+    }
+    
+    //DBのpathを生成 http://qiita.com/f_clover/items/1ba0785e3257cc075907
+    func pathDb(dbName:String) -> String{
+        var path:String = NSHomeDirectory() + "/Documents/" + dbName
+        return path
     }
 
 }

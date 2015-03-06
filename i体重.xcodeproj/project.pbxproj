@@ -18,7 +18,7 @@
 		769D84341AA84D3400426C4C /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769D84331AA84D3400426C4C /* Realm.framework */; };
 		769D84361AA84D8500426C4C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 769D84351AA84D8500426C4C /* libc++.dylib */; };
 		769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84371AA84DCA00426C4C /* RLMSupport.swift */; };
-		769D843A1AA8504C00426C4C /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84391AA8504C00426C4C /* Staff.swift */; };
+		76C85FBE1AA96D09008F9101 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C85FBD1AA96D09008F9101 /* Weight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		769D84331AA84D3400426C4C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		769D84351AA84D8500426C4C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		769D84371AA84DCA00426C4C /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
-		769D84391AA8504C00426C4C /* Staff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		76C85FBD1AA96D09008F9101 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +96,7 @@
 			children = (
 				769D840D1AA83CD000426C4C /* AppDelegate.swift */,
 				769D840F1AA83CD000426C4C /* ViewController.swift */,
-				769D84391AA8504C00426C4C /* Staff.swift */,
+				76C85FBD1AA96D09008F9101 /* Weight.swift */,
 				769D842F1AA83F5200426C4C /* CalcBmiViewController.swift */,
 				769D84111AA83CD000426C4C /* Main.storyboard */,
 				769D84311AA83F9600426C4C /* SettingViewController.swift */,
@@ -232,12 +232,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				769D843A1AA8504C00426C4C /* Staff.swift in Sources */,
 				769D84101AA83CD000426C4C /* ViewController.swift in Sources */,
 				769D840E1AA83CD000426C4C /* AppDelegate.swift in Sources */,
 				769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */,
 				769D84301AA83F5200426C4C /* CalcBmiViewController.swift in Sources */,
 				769D84321AA83F9600426C4C /* SettingViewController.swift in Sources */,
+				76C85FBE1AA96D09008F9101 /* Weight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +437,7 @@
 				769D84291AA83CD000426C4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		769D842A1AA83CD000426C4C /* Build configuration list for PBXNativeTarget "i体重Tests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +446,7 @@
 				769D842C1AA83CD000426C4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
