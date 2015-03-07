@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="l2G-Kw-q4e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -37,11 +37,12 @@
                                     <segue destination="p24-di-SnO" kind="showDetail" id="U09-Bb-0hH"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="体重[kg]" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AAS-xp-yBm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="体重[kg]" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AAS-xp-yBm">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="14"/>
                                     <rect key="frame" x="152" y="212" width="97" height="30"/>
                                 </variation>
                             </textField>
@@ -54,7 +55,7 @@
                                     <rect key="frame" x="177" y="250" width="35" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="aQf-ku-8X9" kind="push" id="WFa-k4-ldk"/>
+                                    <action selector="resultButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aBD-gM-B8c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -77,6 +78,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="i体重" id="eTb-AW-LQ8"/>
+                    <connections>
+                        <outlet property="weightField" destination="AAS-xp-yBm" id="LWl-Zs-u7z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,12 +89,13 @@
         <!--体重-->
         <scene sceneID="Qaj-yZ-Vnn">
             <objects>
-                <viewController id="aQf-ku-8X9" customClass="CalcBmiViewController" customModule="i体重" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aQf-ku-8X9" customClass="CalcBmiViewController" customModule="i体重" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gEP-Ti-8Oi"/>
                         <viewControllerLayoutGuide type="bottom" id="nNv-Pv-wzW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XcS-3N-3nA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたのBMIは" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szf-sf-1pk">
@@ -138,6 +143,18 @@
                                     <rect key="frame" x="166" y="349" width="68" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vy0-EY-hmu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="TOPへ戻る">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="158" y="454" width="76" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="goBackHome:" destination="aQf-ku-8X9" eventType="touchUpInside" id="LWs-R3-eul"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -147,6 +164,7 @@
                                 <exclude reference="AXY-uh-wX2"/>
                                 <exclude reference="bFz-XW-V2T"/>
                                 <exclude reference="d55-yM-ITs"/>
+                                <exclude reference="vy0-EY-hmu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -156,6 +174,7 @@
                                 <include reference="AXY-uh-wX2"/>
                                 <include reference="bFz-XW-V2T"/>
                                 <include reference="d55-yM-ITs"/>
+                                <include reference="vy0-EY-hmu"/>
                             </mask>
                         </variation>
                     </view>
@@ -169,24 +188,6 @@
             </objects>
             <point key="canvasLocation" x="1891.5" y="429"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="FaH-di-b5c">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l2G-Kw-q4e" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z5N-3M-S8r">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="TEc-zn-XhJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WJn-Lf-XwP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="379" y="849"/>
-        </scene>
         <!--設定-->
         <scene sceneID="s3v-DM-58I">
             <objects>
@@ -196,12 +197,13 @@
                         <viewControllerLayoutGuide type="bottom" id="BZj-PL-shC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="88y-Os-InE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="身長[cm]" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-ti-rcO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="身長[cm]" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="M1D-ti-rcO">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="224" y="163" width="97" height="30"/>
                                 </variation>
@@ -245,10 +247,30 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="設定" id="bRk-Uo-QGV"/>
+                    <connections>
+                        <outlet property="heightField" destination="M1D-ti-rcO" id="kx4-07-wcO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUr-cB-tJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1168.5" y="1243"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="P6P-p9-gSj">
+            <objects>
+                <viewController id="4mp-3v-kdT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2T-Hg-2sf"/>
+                        <viewControllerLayoutGuide type="bottom" id="hC4-Y9-9Mf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6jv-Sk-pUR">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X65-io-3hP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="1091"/>
         </scene>
     </scenes>
 </document>

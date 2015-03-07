@@ -19,6 +19,7 @@
 		769D84361AA84D8500426C4C /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 769D84351AA84D8500426C4C /* libc++.dylib */; };
 		769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84371AA84DCA00426C4C /* RLMSupport.swift */; };
 		76C85FBE1AA96D09008F9101 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C85FBD1AA96D09008F9101 /* Weight.swift */; };
+		76FE70191AAAEC540075D916 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 76FE70181AAAEC540075D916 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		769D84351AA84D8500426C4C /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		769D84371AA84DCA00426C4C /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		76C85FBD1AA96D09008F9101 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		76FE70181AAAEC540075D916 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		769D83FF1AA83CD000426C4C = {
 			isa = PBXGroup;
 			children = (
+				76FE70181AAAEC540075D916 /* Readme.md */,
 				769D84371AA84DCA00426C4C /* RLMSupport.swift */,
 				769D84351AA84D8500426C4C /* libc++.dylib */,
 				769D84331AA84D3400426C4C /* Realm.framework */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76FE70191AAAEC540075D916 /* Readme.md in Sources */,
 				769D84101AA83CD000426C4C /* ViewController.swift in Sources */,
 				769D840E1AA83CD000426C4C /* AppDelegate.swift in Sources */,
 				769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */,

@@ -15,20 +15,37 @@ class CalcBmiViewController: UIViewController {
     
     @IBOutlet weak var stateLabel: UILabel!
     
+    @IBAction func goBackHome(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        println(height)
         
-        let bmi:Double = calcBmi(1.78, weight: 68)
+      
+        
+        
+        // app delegateを使ってデータをget　http://qiita.com/xa_un/items/814a5cd4472674640f58
+        var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate //AppDelegateのインスタンスを取得
+        var deleWeight = appDelegate.deleWeight!
+        var deleHeight = appDelegate.deleHeight!
+        println("DELE")
+        println(deleWeight)
+        
+        let bmi:Double = calcBmi(deleHeight, weight: deleWeight)
+        
         let state:String = checkState(bmi)
         
-        self.bmiLabel.text = bmi.description
-        self.stateLabel.text = state
+
+        self.bmiLabel.text = NSString(format: "%.2f", bmi)
+
         
+        self.stateLabel.text = state
+
         
     
         // DB処理
@@ -40,9 +57,8 @@ class CalcBmiViewController: UIViewController {
             // defaultのパスを設定（モデルを変更した時Db名を変えた必要あり）
             let path:String = pathDb("weight.realm")
             RLMRealm.setDefaultRealmPath(path)
-            println(RLMRealm.defaultRealmPath())
-            
-            
+//            println(RLMRealm.defaultRealmPath())
+        
             let realm = RLMRealm.defaultRealm()
             
             
@@ -59,9 +75,9 @@ class CalcBmiViewController: UIViewController {
             
             // 検索
             for realmWeight in Weight.allObjects(){
-                println("+++++++++++++++")
-                println((realmWeight as Weight).weight)
-                println((realmWeight as Weight).date)
+//                println("+++++++++++++++")
+//                println((realmWeight as Weight).weight)
+//                println((realmWeight as Weight).date)
             }
 
       
