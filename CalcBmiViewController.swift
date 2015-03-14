@@ -64,7 +64,7 @@ class CalcBmiViewController: UIViewController {
             
             // INSERTするweightインスタンスを作成
             let weight = Weight()
-            weight.weight = 234.3
+            weight.weight = deleWeight
             weight.date = getLocalTime()
             
             
@@ -75,9 +75,9 @@ class CalcBmiViewController: UIViewController {
             
             // 検索
             for realmWeight in Weight.allObjects(){
-//                println("+++++++++++++++")
-//                println((realmWeight as Weight).weight)
-//                println((realmWeight as Weight).date)
+                println("+++++++++++++++")
+                println((realmWeight as Weight).weight)
+                println((realmWeight as Weight).date)
             }
 
       

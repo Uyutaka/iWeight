@@ -20,6 +20,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

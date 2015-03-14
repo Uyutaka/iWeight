@@ -20,6 +20,7 @@
 		769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769D84371AA84DCA00426C4C /* RLMSupport.swift */; };
 		76C85FBE1AA96D09008F9101 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C85FBD1AA96D09008F9101 /* Weight.swift */; };
 		76FE70191AAAEC540075D916 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 76FE70181AAAEC540075D916 /* Readme.md */; };
+		76FE701B1AAD95930075D916 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE701A1AAD95930075D916 /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		769D84371AA84DCA00426C4C /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		76C85FBD1AA96D09008F9101 /* Weight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
 		76FE70181AAAEC540075D916 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		76FE701A1AAD95930075D916 /* RecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				76C85FBD1AA96D09008F9101 /* Weight.swift */,
 				769D842F1AA83F5200426C4C /* CalcBmiViewController.swift */,
 				769D84111AA83CD000426C4C /* Main.storyboard */,
+				76FE701A1AAD95930075D916 /* RecordViewController.swift */,
 				769D84311AA83F9600426C4C /* SettingViewController.swift */,
 				769D84141AA83CD000426C4C /* Images.xcassets */,
 				769D84161AA83CD000426C4C /* LaunchScreen.xib */,
@@ -238,6 +241,7 @@
 				76FE70191AAAEC540075D916 /* Readme.md in Sources */,
 				769D84101AA83CD000426C4C /* ViewController.swift in Sources */,
 				769D840E1AA83CD000426C4C /* AppDelegate.swift in Sources */,
+				76FE701B1AAD95930075D916 /* RecordViewController.swift in Sources */,
 				769D84381AA84DCA00426C4C /* RLMSupport.swift in Sources */,
 				769D84301AA83F5200426C4C /* CalcBmiViewController.swift in Sources */,
 				769D84321AA83F9600426C4C /* SettingViewController.swift in Sources */,

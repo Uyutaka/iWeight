@@ -12,11 +12,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var weightField: UITextField!
     
+    @IBAction func recordButton() {
+        // 次のViewへ移る　http://ja.stackoverflow.com/questions/4371/xcodeswift%E3%81%A7%E3%81%AE%E3%82%BB%E3%82%B0%E3%82%A8%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%AA%E3%81%84%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("record")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func resultButton() {
         
         var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate //AppDelegateのインスタンスを取得
         let deleWeight = appDelegate.deleWeight
         let deleHeight = appDelegate.deleHeight
+    
         
         //TODO deleHeight, deleWeightをswitch文で分岐
         
@@ -68,7 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             println("押された ")
             
             // 次のViewへ移る　http://ja.stackoverflow.com/questions/4371/xcodeswift%E3%81%A7%E3%81%AE%E3%82%BB%E3%82%B0%E3%82%A8%E3%82%92%E4%BD%BF%E3%82%8F%E3%81%AA%E3%81%84%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("next")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("calcBmi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
             
 
@@ -104,14 +111,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }else{
             println(tmpStr)
             
-            var test:Double = NSString(string: tmpStr).doubleValue
-            println(test)
+
             // appdelegateを使ってデータをset　http://qiita.com/xa_un/items/814a5cd4472674640f58
             var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as AppDelegate //AppDelegateのインスタンスを取得
             
             appDelegate.deleWeight = NSString(string: tmpStr).doubleValue // NSString->Double　に変換後delegateに代入 http://qiita.com/MashMorgan/items/771f8143470b80bd9996
-
         }
+        
+
+
         return true
     }
     
