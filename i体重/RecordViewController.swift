@@ -81,7 +81,7 @@ class RecordViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // セクションタイトル
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         // セクション番号をタイトルにする
-        return "体重(section)" + section.description
+        return "体重"
     }
     
     /* UITableViewDelegateデリゲートメソッド */

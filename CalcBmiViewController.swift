@@ -50,14 +50,14 @@ class CalcBmiViewController: UIViewController {
     
         // DB処理
             // pathを確認
-            println(RLMRealm.defaultRealmPath())
+//            println(RLMRealm.defaultRealmPath())
             println("_____")
             
             
             // defaultのパスを設定（モデルを変更した時Db名を変えた必要あり）
             let path:String = pathDb("weight.realm")
             RLMRealm.setDefaultRealmPath(path)
-//            println(RLMRealm.defaultRealmPath())
+            println(RLMRealm.defaultRealmPath())
         
             let realm = RLMRealm.defaultRealm()
             
