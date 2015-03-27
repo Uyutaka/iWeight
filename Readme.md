@@ -3,6 +3,8 @@
 体重、身長をtextFieldに入力することでBMIを判定する。またBMIを元に体型を３種類に判断
 Realmを用いて体重を保存
 
+##デモ
+https://github.com/Uyutaka/iWeight
 
 
 ##タスク
