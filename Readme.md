@@ -4,8 +4,7 @@
 Realmを用いて体重を保存
 
 ##デモ
-https://github.com/Uyutaka/iWeight
-
+https://youtu.be/DQ7vKtrhwK8
 
 ##タスク
 
